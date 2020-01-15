@@ -13,6 +13,14 @@
 		F377D16923CF7F3F00C45E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F377D16723CF7F3F00C45E9C /* Main.storyboard */; };
 		F377D16B23CF7F4100C45E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F377D16A23CF7F4100C45E9C /* Assets.xcassets */; };
 		F377D16E23CF7F4100C45E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F377D16C23CF7F4100C45E9C /* LaunchScreen.storyboard */; };
+		F377D17B23CF8FBD00C45E9C /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D17A23CF8FBD00C45E9C /* EndPointType.swift */; };
+		F377D17D23CF903900C45E9C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D17C23CF903900C45E9C /* HTTPMethod.swift */; };
+		F377D17F23CF913A00C45E9C /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D17E23CF913A00C45E9C /* HTTPTask.swift */; };
+		F377D18123CF92C000C45E9C /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18023CF92C000C45E9C /* ParameterEncoding.swift */; };
+		F377D18323CF953400C45E9C /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18223CF953400C45E9C /* URLParameterEncoder.swift */; };
+		F377D18523CF98CF00C45E9C /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18423CF98CF00C45E9C /* JSONParameterEncoder.swift */; };
+		F377D18723CF9A1A00C45E9C /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18623CF9A1A00C45E9C /* NetworkRouter.swift */; };
+		F377D18923CF9F2200C45E9C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18823CF9F2200C45E9C /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		F377D16A23CF7F4100C45E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F377D16D23CF7F4100C45E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F377D16F23CF7F4100C45E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F377D17A23CF8FBD00C45E9C /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		F377D17C23CF903900C45E9C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F377D17E23CF913A00C45E9C /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		F377D18023CF92C000C45E9C /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		F377D18223CF953400C45E9C /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		F377D18423CF98CF00C45E9C /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		F377D18623CF9A1A00C45E9C /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		F377D18823CF9F2200C45E9C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		F377D16023CF7F3F00C45E9C /* MyFruitsDiary */ = {
 			isa = PBXGroup;
 			children = (
+				F377D17523CF8F6600C45E9C /* Networking */,
 				F377D16123CF7F3F00C45E9C /* AppDelegate.swift */,
 				F377D16323CF7F3F00C45E9C /* SceneDelegate.swift */,
 				F377D16523CF7F3F00C45E9C /* ViewController.swift */,
@@ -65,6 +82,53 @@
 				F377D16F23CF7F4100C45E9C /* Info.plist */,
 			);
 			path = MyFruitsDiary;
+			sourceTree = "<group>";
+		};
+		F377D17523CF8F6600C45E9C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F377D17623CF8F7C00C45E9C /* EndPoint */,
+				F377D17923CF8F9F00C45E9C /* Manager */,
+				F377D17823CF8F9800C45E9C /* Service */,
+				F377D17723CF8F8C00C45E9C /* Encoding */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F377D17623CF8F7C00C45E9C /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		F377D17723CF8F8C00C45E9C /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				F377D18023CF92C000C45E9C /* ParameterEncoding.swift */,
+				F377D18223CF953400C45E9C /* URLParameterEncoder.swift */,
+				F377D18423CF98CF00C45E9C /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		F377D17823CF8F9800C45E9C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F377D17A23CF8FBD00C45E9C /* EndPointType.swift */,
+				F377D17C23CF903900C45E9C /* HTTPMethod.swift */,
+				F377D17E23CF913A00C45E9C /* HTTPTask.swift */,
+				F377D18623CF9A1A00C45E9C /* NetworkRouter.swift */,
+				F377D18823CF9F2200C45E9C /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F377D17923CF8F9F00C45E9C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +202,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F377D18923CF9F2200C45E9C /* Router.swift in Sources */,
+				F377D18323CF953400C45E9C /* URLParameterEncoder.swift in Sources */,
+				F377D18123CF92C000C45E9C /* ParameterEncoding.swift in Sources */,
+				F377D17F23CF913A00C45E9C /* HTTPTask.swift in Sources */,
+				F377D17B23CF8FBD00C45E9C /* EndPointType.swift in Sources */,
 				F377D16623CF7F3F00C45E9C /* ViewController.swift in Sources */,
+				F377D18523CF98CF00C45E9C /* JSONParameterEncoder.swift in Sources */,
 				F377D16223CF7F3F00C45E9C /* AppDelegate.swift in Sources */,
+				F377D18723CF9A1A00C45E9C /* NetworkRouter.swift in Sources */,
+				F377D17D23CF903900C45E9C /* HTTPMethod.swift in Sources */,
 				F377D16423CF7F3F00C45E9C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
