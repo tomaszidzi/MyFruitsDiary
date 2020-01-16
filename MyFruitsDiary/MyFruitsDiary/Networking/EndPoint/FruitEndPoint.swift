@@ -25,7 +25,7 @@ extension FruitAPI: EndPointType {
         
     var environmentBaseURL: String {
         switch NetworkManager.environment {
-        case .production: return " ​https://fruitdiary.test.themobilelife.com/api/"
+        case .production: return "https://fruitdiary.test.themobilelife.com/api/"
         }
     }
     
