@@ -6,7 +6,27 @@
 //  Copyright © 2020 Tomasz Idzi. All rights reserved.
 //
 
-import Foundation
+struct FruitLite {
+    let id: Int
+    let type: String
+    let amount: Int
+}
+
+extension FruitLite: Decodable {
+    enum FruitLiteCodingKeys: String, CodingKey {
+        case id = "fruitId"
+        case type = "fruitType"
+        case amount = "amount"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let fruitContainer = try decoder.container(keyedBy: FruitLiteCodingKeys.self)
+        
+        id = try fruitContainer.decode(Int.self, forKey: .id)
+        type = try fruitContainer.decode(String.self, forKey: .type)
+        amount = try fruitContainer.decode(Int.self, forKey: .amount)
+    }
+}
 
 struct Fruit {
     let id: Int
