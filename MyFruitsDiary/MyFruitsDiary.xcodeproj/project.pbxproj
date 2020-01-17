@@ -26,6 +26,8 @@
 		F377D19023CFB93B00C45E9C /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18F23CFB93B00C45E9C /* Fruit.swift */; };
 		F377D19223D0E39600C45E9C /* FruitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19123D0E39600C45E9C /* FruitList.swift */; };
 		F377D19423D1242500C45E9C /* ConfirmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19323D1242500C45E9C /* ConfirmResponse.swift */; };
+		F377D19823D204C900C45E9C /* MyDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19723D204C900C45E9C /* MyDiaryViewController.swift */; };
+		F377D19A23D204DD00C45E9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19923D204DD00C45E9C /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		F377D18F23CFB93B00C45E9C /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		F377D19123D0E39600C45E9C /* FruitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitList.swift; sourceTree = "<group>"; };
 		F377D19323D1242500C45E9C /* ConfirmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResponse.swift; sourceTree = "<group>"; };
+		F377D19723D204C900C45E9C /* MyDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryViewController.swift; sourceTree = "<group>"; };
+		F377D19923D204DD00C45E9C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +86,12 @@
 		F377D16023CF7F3F00C45E9C /* MyFruitsDiary */ = {
 			isa = PBXGroup;
 			children = (
+				F377D19623D2049900C45E9C /* Application */,
+				F377D19523D2048800C45E9C /* ViewController */,
 				F377D18E23CFB7CA00C45E9C /* Model */,
 				F377D17523CF8F6600C45E9C /* Networking */,
-				F377D16123CF7F3F00C45E9C /* AppDelegate.swift */,
-				F377D16323CF7F3F00C45E9C /* SceneDelegate.swift */,
-				F377D16523CF7F3F00C45E9C /* ViewController.swift */,
-				F377D16723CF7F3F00C45E9C /* Main.storyboard */,
 				F377D16A23CF7F4100C45E9C /* Assets.xcassets */,
+				F377D16723CF7F3F00C45E9C /* Main.storyboard */,
 				F377D16C23CF7F4100C45E9C /* LaunchScreen.storyboard */,
 				F377D16F23CF7F4100C45E9C /* Info.plist */,
 			);
@@ -152,6 +155,25 @@
 				F377D19323D1242500C45E9C /* ConfirmResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F377D19523D2048800C45E9C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F377D19723D204C900C45E9C /* MyDiaryViewController.swift */,
+				F377D19923D204DD00C45E9C /* AboutViewController.swift */,
+				F377D16523CF7F3F00C45E9C /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F377D19623D2049900C45E9C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F377D16123CF7F3F00C45E9C /* AppDelegate.swift */,
+				F377D16323CF7F3F00C45E9C /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,10 +254,12 @@
 				F377D19023CFB93B00C45E9C /* Fruit.swift in Sources */,
 				F377D18123CF92C000C45E9C /* ParameterEncoding.swift in Sources */,
 				F377D17F23CF913A00C45E9C /* HTTPTask.swift in Sources */,
+				F377D19823D204C900C45E9C /* MyDiaryViewController.swift in Sources */,
 				F377D17B23CF8FBD00C45E9C /* EndPointType.swift in Sources */,
 				F377D16623CF7F3F00C45E9C /* ViewController.swift in Sources */,
 				F377D18523CF98CF00C45E9C /* JSONParameterEncoder.swift in Sources */,
 				F377D16223CF7F3F00C45E9C /* AppDelegate.swift in Sources */,
+				F377D19A23D204DD00C45E9C /* AboutViewController.swift in Sources */,
 				F377D18723CF9A1A00C45E9C /* NetworkRouter.swift in Sources */,
 				F377D19223D0E39600C45E9C /* FruitList.swift in Sources */,
 				F377D19423D1242500C45E9C /* ConfirmResponse.swift in Sources */,
