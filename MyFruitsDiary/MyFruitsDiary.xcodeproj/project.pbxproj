@@ -29,6 +29,8 @@
 		F377D19823D204C900C45E9C /* MyDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19723D204C900C45E9C /* MyDiaryViewController.swift */; };
 		F377D19A23D204DD00C45E9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19923D204DD00C45E9C /* AboutViewController.swift */; };
 		F377D19E23D2092F00C45E9C /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19D23D2092F00C45E9C /* EntryCell.swift */; };
+		F377D1A023D22C1900C45E9C /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19F23D22C1900C45E9C /* EntryDetailViewController.swift */; };
+		F377D1A223D22E0300C45E9C /* FruitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D1A123D22E0300C45E9C /* FruitCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		F377D19723D204C900C45E9C /* MyDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryViewController.swift; sourceTree = "<group>"; };
 		F377D19923D204DD00C45E9C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F377D19D23D2092F00C45E9C /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		F377D19F23D22C1900C45E9C /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		F377D1A123D22E0300C45E9C /* FruitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 				F377D19723D204C900C45E9C /* MyDiaryViewController.swift */,
 				F377D19923D204DD00C45E9C /* AboutViewController.swift */,
 				F377D16523CF7F3F00C45E9C /* ViewController.swift */,
+				F377D19F23D22C1900C45E9C /* EntryDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				F377D19D23D2092F00C45E9C /* EntryCell.swift */,
+				F377D1A123D22E0300C45E9C /* FruitCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 				F377D18B23CFAAB900C45E9C /* FruitEndPoint.swift in Sources */,
 				F377D18323CF953400C45E9C /* URLParameterEncoder.swift in Sources */,
 				F377D18D23CFAD3B00C45E9C /* NetworkManager.swift in Sources */,
+				F377D1A223D22E0300C45E9C /* FruitCell.swift in Sources */,
 				F377D19023CFB93B00C45E9C /* Fruit.swift in Sources */,
 				F377D18123CF92C000C45E9C /* ParameterEncoding.swift in Sources */,
 				F377D17F23CF913A00C45E9C /* HTTPTask.swift in Sources */,
@@ -284,6 +291,7 @@
 				F377D19E23D2092F00C45E9C /* EntryCell.swift in Sources */,
 				F377D19423D1242500C45E9C /* ConfirmResponse.swift in Sources */,
 				F377D17D23CF903900C45E9C /* HTTPMethod.swift in Sources */,
+				F377D1A023D22C1900C45E9C /* EntryDetailViewController.swift in Sources */,
 				F377D16423CF7F3F00C45E9C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
