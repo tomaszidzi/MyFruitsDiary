@@ -98,29 +98,35 @@ extension EntryDetailViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if self.viewType == .addView {
-            let alert = UIAlertController(title: "Add amount of fruit.",
-                                          message: nil,
-                                          preferredStyle: .alert)
-            alert.addTextField { (textField) in
-                textField.keyboardType = .numberPad
-            }
+        let alert = UIAlertController(title: "Add amount of fruit.",
+                                      message: nil,
+                                      preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.keyboardType = .numberPad
+        }
 
-            let addAction = UIAlertAction(title: "Add", style: .default) { [unowned alert] (action) in
-                if let textField = alert.textFields?.first,
-                    let text = textField.text, let amount = Int(text), let dataSource = self.fruits {
+        let addAction = UIAlertAction(title: "Add", style: .default) { [unowned alert] (action) in
+            if let textField = alert.textFields?.first,
+                let text = textField.text, let amount = Int(text), let dataSource = self.fruits {
+                switch self.viewType {
+                case .addView:
                     self.delegate?.fruitDidAdd(with: dataSource[indexPath.row], amount: amount)
                     self.dismiss(animated: true, completion: nil)
+                case .infoView:
+                    guard let selectedEntry = self.entry, let dataSource = self.entry else { return }
+                    self.updateEntry(entryId: selectedEntry.id, fruitId: dataSource.fruits[indexPath.row].id, nrOfFruit: amount)
                 }
+                
+                
             }
-            
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-            alert.addAction(addAction)
-            alert.addAction(cancelAction)
-            
-            self.present(alert, animated: true, completion: nil)
         }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(addAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
