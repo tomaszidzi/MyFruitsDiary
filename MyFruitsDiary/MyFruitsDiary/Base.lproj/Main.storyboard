@@ -14,7 +14,31 @@
                     <view key="view" contentMode="scaleToFill" id="qF5-ct-sHO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TI_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="AAd-Cn-EvI">
+                                <rect key="frame" x="44" y="88" width="326" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AAd-Cn-EvI" secondAttribute="height" multiplier="15:8" id="9kZ-ra-000"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMA-Ic-4AC">
+                                <rect key="frame" x="90.5" y="306" width="233.5" height="41"/>
+                                <string key="text">Created by Tomasz Idzi
+Copyright © 2020 Tomasz Idzi</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EMA-Ic-4AC" firstAttribute="centerX" secondItem="qF5-ct-sHO" secondAttribute="centerX" id="2vp-fA-Z1S"/>
+                            <constraint firstItem="EMA-Ic-4AC" firstAttribute="top" secondItem="AAd-Cn-EvI" secondAttribute="bottom" constant="44" id="DXo-OJ-JGw"/>
+                            <constraint firstItem="AAd-Cn-EvI" firstAttribute="centerX" secondItem="qF5-ct-sHO" secondAttribute="centerX" id="N22-dg-WjW"/>
+                            <constraint firstItem="AAd-Cn-EvI" firstAttribute="top" secondItem="6Ud-0M-fzV" secondAttribute="top" constant="44" id="afR-Si-NdT"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AAd-Cn-EvI" secondAttribute="trailing" constant="44" id="fQr-6v-mH6"/>
+                            <constraint firstItem="AAd-Cn-EvI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qF5-ct-sHO" secondAttribute="leading" constant="44" id="iGc-iJ-NrA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Ud-0M-fzV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="person.crop.circle" catalog="system" id="tlX-di-jBc"/>
@@ -36,10 +60,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" id="Pev-Yj-ccs" customClass="EntryCell" customModule="MyFruitsDiary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="109.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pev-Yj-ccs" id="hhA-U2-dDW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YK-FT-GQW">
@@ -52,7 +76,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-TU-3mT">
-                                                    <rect key="frame" x="36" y="69.5" width="342" height="21"/>
+                                                    <rect key="frame" x="36" y="69" width="342" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="I7y-ya-V5U"/>
                                                     </constraints>
@@ -61,10 +85,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti2-bd-89z">
-                                                    <rect key="frame" x="36" y="44" width="342" height="21.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="usf-eV-D48"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="36" y="44" width="342" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -154,15 +175,15 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FruitCell" rowHeight="58" id="0R3-nN-blA" customClass="FruitCell" customModule="MyFruitsDiary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FruitCell" id="0R3-nN-blA" customClass="FruitCell" customModule="MyFruitsDiary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0R3-nN-blA" id="sLX-ah-A2I">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OkE-Xs-tij">
-                                                    <rect key="frame" x="5" y="5" width="50" height="48"/>
+                                                    <rect key="frame" x="5" y="5" width="50" height="50.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="0SC-NQ-auN"/>
                                                         <constraint firstAttribute="height" constant="50" id="tTY-61-yyi"/>
@@ -274,6 +295,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TI_avatar" width="800" height="800"/>
         <image name="calendar.badge.plus" catalog="system" width="64" height="50"/>
         <image name="person.crop.circle" catalog="system" width="64" height="60"/>
     </resources>
