@@ -28,6 +28,7 @@
 		F377D19423D1242500C45E9C /* ConfirmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19323D1242500C45E9C /* ConfirmResponse.swift */; };
 		F377D19823D204C900C45E9C /* MyDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19723D204C900C45E9C /* MyDiaryViewController.swift */; };
 		F377D19A23D204DD00C45E9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19923D204DD00C45E9C /* AboutViewController.swift */; };
+		F377D19E23D2092F00C45E9C /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19D23D2092F00C45E9C /* EntryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F377D19323D1242500C45E9C /* ConfirmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResponse.swift; sourceTree = "<group>"; };
 		F377D19723D204C900C45E9C /* MyDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryViewController.swift; sourceTree = "<group>"; };
 		F377D19923D204DD00C45E9C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		F377D19D23D2092F00C45E9C /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				F377D19623D2049900C45E9C /* Application */,
-				F377D19523D2048800C45E9C /* ViewController */,
 				F377D18E23CFB7CA00C45E9C /* Model */,
+				F377D19B23D208F300C45E9C /* Views */,
+				F377D19523D2048800C45E9C /* ViewControllers */,
 				F377D17523CF8F6600C45E9C /* Networking */,
 				F377D16A23CF7F4100C45E9C /* Assets.xcassets */,
 				F377D16723CF7F3F00C45E9C /* Main.storyboard */,
@@ -157,14 +160,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F377D19523D2048800C45E9C /* ViewController */ = {
+		F377D19523D2048800C45E9C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F377D19723D204C900C45E9C /* MyDiaryViewController.swift */,
 				F377D19923D204DD00C45E9C /* AboutViewController.swift */,
 				F377D16523CF7F3F00C45E9C /* ViewController.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F377D19623D2049900C45E9C /* Application */ = {
@@ -174,6 +177,22 @@
 				F377D16323CF7F3F00C45E9C /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		F377D19B23D208F300C45E9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F377D19C23D2091300C45E9C /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F377D19C23D2091300C45E9C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F377D19D23D2092F00C45E9C /* EntryCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +281,7 @@
 				F377D19A23D204DD00C45E9C /* AboutViewController.swift in Sources */,
 				F377D18723CF9A1A00C45E9C /* NetworkRouter.swift in Sources */,
 				F377D19223D0E39600C45E9C /* FruitList.swift in Sources */,
+				F377D19E23D2092F00C45E9C /* EntryCell.swift in Sources */,
 				F377D19423D1242500C45E9C /* ConfirmResponse.swift in Sources */,
 				F377D17D23CF903900C45E9C /* HTTPMethod.swift in Sources */,
 				F377D16423CF7F3F00C45E9C /* SceneDelegate.swift in Sources */,
