@@ -46,8 +46,8 @@ extension FruitAPI: EndPointType {
             return "entry/\(id)"
         case .addEntry:
             return "entries"
-        case .updateEntry(let entryId, let fruitId, let nrOfFruit):
-            return "entry/\(entryId)/fruit/\(fruitId)?amount=\(nrOfFruit)"
+        case .updateEntry(let entryId, let fruitId, _):
+            return "entry/\(entryId)/fruit/\(fruitId)"
         }
     }
     
@@ -69,12 +69,20 @@ extension FruitAPI: EndPointType {
         switch self {
         case .addEntry(let date):
             return .requestParameters(bodyParameters: ["date":date], urlParameters: nil)
+        case .updateEntry(_, _, let nrOfFruit):
+            return .requestParameters(bodyParameters: nil, urlParameters: ["amount":nrOfFruit])
         default:
             return .request
         }
     }
     
     var headers: HTTPHeaders? {
-        return nil
+        switch self {
+        case .addEntry,
+             .updateEntry:
+            return ["Content-Type":"application/json"]
+        default:
+            return nil
+        }
     }
 }
