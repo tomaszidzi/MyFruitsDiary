@@ -22,7 +22,21 @@ class MyDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "MyDiary"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getFruit()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            if let viewController = segue.destination as? EntryDetailViewController,
+                let entry = sender as? FruitList {
+                viewController.entry = entry
+                viewController.fruits = self.fruits
+            }
+        }
     }
 
     // MARK: - Requests
@@ -68,13 +82,12 @@ class MyDiaryViewController: UIViewController {
     private func removeAllEntries() {
         networkManager.removeAllEntries() { response, error in
             if response?.code == 200 {
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                self.getEntries()
             }
         }
     }
     
+    // MARK: - Actions
     @IBAction func addEntry(_ sender: Any) {
         let datePicker: UIDatePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -115,6 +128,13 @@ extension MyDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setupInterfacte(with: dataSource[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let entriesArray = self.entries else { return }
+        let entry = entriesArray[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: entry)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
