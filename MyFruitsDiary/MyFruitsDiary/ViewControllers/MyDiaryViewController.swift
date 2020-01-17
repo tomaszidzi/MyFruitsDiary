@@ -21,8 +21,7 @@ class MyDiaryViewController: UIViewController {
     // MARK: - ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "My Diary"
-        
+        self.title = "MyDiary"
         getFruit()
     }
 
@@ -41,6 +40,63 @@ class MyDiaryViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    private func addEntry(with date: String) {
+        networkManager.addEntry(date: date) { response, error in
+            guard let fruitList = response else { return }
+            self.entries?.append(fruitList)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private func removeEntry(at indexPath: IndexPath) {
+        guard let entriesArray = self.entries else { return }
+        let entry = entriesArray[indexPath.row]
+        networkManager.removeSpecificEntries(entryId: entry.id) { response, error in
+            if response?.code == 200 {
+                self.entries?.remove(at: indexPath.row)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    private func removeAllEntries() {
+        networkManager.removeAllEntries() { response, error in
+            if response?.code == 200 {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    @IBAction func addEntry(_ sender: Any) {
+        let datePicker: UIDatePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.frame = CGRect(x: 0, y: 15, width: 270, height: 200)
+        
+        let alertController = UIAlertController(title: "Add Entry", message: "\n\n\n\n\n\n\n\n", preferredStyle: UIAlertController.Style.alert)
+        alertController.view.addSubview(datePicker)
+        
+        let addAction = UIAlertAction(title: "Add", style: .default) { _ in
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let selectedDate = dateFormatter.string(from: datePicker.date)
+            self.addEntry(with: selectedDate)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion:{})
+    }
+    
+    @IBAction func removeAll(_ sender: Any) {
+        removeAllEntries()
     }
 }
 
@@ -61,5 +117,13 @@ extension MyDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            removeEntry(at: indexPath)
+        }
+    }
 }
