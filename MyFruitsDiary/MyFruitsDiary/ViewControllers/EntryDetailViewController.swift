@@ -96,6 +96,8 @@ extension EntryDetailViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         if self.viewType == .addView {
             let alert = UIAlertController(title: "Add amount of fruit.",
                                           message: nil,
