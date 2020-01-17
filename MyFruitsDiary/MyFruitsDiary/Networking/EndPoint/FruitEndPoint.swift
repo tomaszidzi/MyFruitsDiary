@@ -19,13 +19,14 @@ public enum FruitAPI {
     case removeSpecificEntry(entryId: Int)
     case addEntry(date: String)
     case updateEntry(entryId: Int, fruitId: Int, nrOfFruit: Int)
+    case downloadImage(path: String)
 }
 
 extension FruitAPI: EndPointType {
         
     var environmentBaseURL: String {
         switch NetworkManager.environment {
-        case .production: return "https://fruitdiary.test.themobilelife.com/api/"
+        case .production: return "https://fruitdiary.test.themobilelife.com/"
         }
     }
     
@@ -37,24 +38,27 @@ extension FruitAPI: EndPointType {
     var path: String {
         switch self {
         case .availableFruits:
-            return "fruit"
+            return "api/fruit"
         case .currentEntries:
-            return "entries"
+            return "api/entries"
         case .removeAllCurrentEntries:
-            return "entries"
+            return "api/entries"
         case .removeSpecificEntry(let id):
-            return "entry/\(id)"
+            return "api/entry/\(id)"
         case .addEntry:
-            return "entries"
+            return "api/entries"
         case .updateEntry(let entryId, let fruitId, _):
-            return "entry/\(entryId)/fruit/\(fruitId)"
+            return "api/entry/\(entryId)/fruit/\(fruitId)"
+        case .downloadImage(let path):
+            return "\(path)"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
         case .availableFruits,
-             .currentEntries:
+             .currentEntries,
+             .downloadImage:
             return .get
         case .removeAllCurrentEntries,
              .removeSpecificEntry:
