@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F377D16223CF7F3F00C45E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D16123CF7F3F00C45E9C /* AppDelegate.swift */; };
 		F377D16423CF7F3F00C45E9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D16323CF7F3F00C45E9C /* SceneDelegate.swift */; };
-		F377D16623CF7F3F00C45E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D16523CF7F3F00C45E9C /* ViewController.swift */; };
 		F377D16923CF7F3F00C45E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F377D16723CF7F3F00C45E9C /* Main.storyboard */; };
 		F377D16B23CF7F4100C45E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F377D16A23CF7F4100C45E9C /* Assets.xcassets */; };
 		F377D16E23CF7F4100C45E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F377D16C23CF7F4100C45E9C /* LaunchScreen.storyboard */; };
@@ -37,7 +36,6 @@
 		F377D15E23CF7F3F00C45E9C /* MyFruitsDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFruitsDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F377D16123CF7F3F00C45E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F377D16323CF7F3F00C45E9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F377D16523CF7F3F00C45E9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F377D16823CF7F3F00C45E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F377D16A23CF7F4100C45E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F377D16D23CF7F4100C45E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			children = (
 				F377D19723D204C900C45E9C /* MyDiaryViewController.swift */,
 				F377D19923D204DD00C45E9C /* AboutViewController.swift */,
-				F377D16523CF7F3F00C45E9C /* ViewController.swift */,
 				F377D19F23D22C1900C45E9C /* EntryDetailViewController.swift */,
 			);
 			path = ViewControllers;
@@ -282,7 +279,6 @@
 				F377D17F23CF913A00C45E9C /* HTTPTask.swift in Sources */,
 				F377D19823D204C900C45E9C /* MyDiaryViewController.swift in Sources */,
 				F377D17B23CF8FBD00C45E9C /* EndPointType.swift in Sources */,
-				F377D16623CF7F3F00C45E9C /* ViewController.swift in Sources */,
 				F377D18523CF98CF00C45E9C /* JSONParameterEncoder.swift in Sources */,
 				F377D16223CF7F3F00C45E9C /* AppDelegate.swift in Sources */,
 				F377D19A23D204DD00C45E9C /* AboutViewController.swift in Sources */,
