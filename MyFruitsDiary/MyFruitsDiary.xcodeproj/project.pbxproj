@@ -25,6 +25,7 @@
 		F377D18D23CFAD3B00C45E9C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18C23CFAD3B00C45E9C /* NetworkManager.swift */; };
 		F377D19023CFB93B00C45E9C /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D18F23CFB93B00C45E9C /* Fruit.swift */; };
 		F377D19223D0E39600C45E9C /* FruitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19123D0E39600C45E9C /* FruitList.swift */; };
+		F377D19423D1242500C45E9C /* ConfirmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377D19323D1242500C45E9C /* ConfirmResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F377D18C23CFAD3B00C45E9C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F377D18F23CFB93B00C45E9C /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		F377D19123D0E39600C45E9C /* FruitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitList.swift; sourceTree = "<group>"; };
+		F377D19323D1242500C45E9C /* ConfirmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				F377D18F23CFB93B00C45E9C /* Fruit.swift */,
 				F377D19123D0E39600C45E9C /* FruitList.swift */,
+				F377D19323D1242500C45E9C /* ConfirmResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				F377D16223CF7F3F00C45E9C /* AppDelegate.swift in Sources */,
 				F377D18723CF9A1A00C45E9C /* NetworkRouter.swift in Sources */,
 				F377D19223D0E39600C45E9C /* FruitList.swift in Sources */,
+				F377D19423D1242500C45E9C /* ConfirmResponse.swift in Sources */,
 				F377D17D23CF903900C45E9C /* HTTPMethod.swift in Sources */,
 				F377D16423CF7F3F00C45E9C /* SceneDelegate.swift in Sources */,
 			);
